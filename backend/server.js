@@ -2,6 +2,7 @@ require("dotenv").config();
 const express=require("express");
 const { GoogleGenAI } = require("@google/genai");
 const path = require("path");
+const rateLimit = require("express-rate-limit");
 
 const app=express();
 app.use(express.json());
