@@ -1,5 +1,7 @@
 const screen = document.querySelector(".screen");
 const buttons = document.querySelector(".buttons");
+const busyNote = document.querySelector(".busy-note");
+
 
 let previous = "";
 let operator = "";
@@ -16,8 +18,11 @@ async function getRoast(a, op, b) {
         });
         if (!res.ok) throw new Error("bad response");
         const data = await res.json();
+        busyNote.style.display = "none";
+        
         return data.roast;
     } catch {
+        busyNote.style.display = "block";
         return "I'd insult you, but I'm too tired. Even for this.";
     }
 }

@@ -166,3 +166,16 @@
     text-align: right;
     margin-top: 14px;
 }
+.busy-note {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 90vw;
+    text-align: center;
+    font-family: "Caveat", cursive;   /* matches the scroll */
+    font-size: 1.3rem;
+    color: #5a3d1e;
+    display: none;  
+}
